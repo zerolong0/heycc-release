@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HeyCC Plugin Manifest",
+  "type": "object",
+  "required": ["name"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)([-+][0-9A-Za-z.-]+)?$"
+    },
+    "description": { "type": "string" },
+    "author": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "email": { "type": "string", "format": "email" },
+            "url": { "type": "string", "format": "uri" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "category": { "type": "string" },
+    "icon": { "type": "string" },
+    "color": { "type": "string" },
+    "defaultEnabled": { "type": "boolean", "default": false },
+    "requiredPermissions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "contributes": {
+      "type": "object",
+      "properties": {
+        "systemPromptFragment": { "type": "string" },
+        "skills": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "inputSchema": { "type": "object" },
+              "command": { "type": "string" },
+              "args": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "requiredPermission": {
+                "type": "string",
+                "enum": ["read-only", "workspace-write", "danger-full-access"]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "quickActions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title", "action"],
+            "properties": {
+              "title": { "type": "string" },
+              "symbol": { "type": "string" },
+              "action": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "dashboard": { "type": "string" },
+        "backgroundTasks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "schedule", "prompt"],
+            "properties": {
+              "id": { "type": "string" },
+              "schedule": { "type": "string" },
+              "prompt": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "mcpServers": {}
+      },
+      "additionalProperties": false
+    }
+  },
+  "not": {
+    "anyOf": [
+      { "required": ["installCommand"] },
+      { "required": ["probeCommand"] }
+    ]
+  },
+  "additionalProperties": false
+}

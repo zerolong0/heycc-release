@@ -1,0 +1,32 @@
+name: Validate public content
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' file; do
+            jq empty "$file"
+          done < <(find . -type f -name '*.json' -not -path './.git/*' -print0)
+
+      - name: Reject unsafe manifest fields
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE '"(installCommand|probeCommand)"[[:space:]]*:' heycc-plugin --include='*.json'; then
+            echo 'Marketplace manifests must not contain installCommand or probeCommand.' >&2
+            exit 1
+          fi

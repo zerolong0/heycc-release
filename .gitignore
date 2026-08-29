@@ -1,0 +1,10 @@
+.DS_Store
+.env
+.env.*
+*.pem
+*.p12
+*.key
+*.mobileprovision
+node_modules/
+.python-version
+__pycache__/

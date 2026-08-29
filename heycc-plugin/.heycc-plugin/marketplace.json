@@ -1,0 +1,10 @@
+{
+  "$schema": "../schemas/marketplace.schema.json",
+  "name": "heycc-official",
+  "version": "0.1.0",
+  "description": "Official and community plugin directory for HeyCC.",
+  "owner": {
+    "name": "HeyCC"
+  },
+  "plugins": []
+}
