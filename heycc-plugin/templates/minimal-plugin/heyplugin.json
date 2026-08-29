@@ -1,7 +1,7 @@
 {
   "name": "my-heycc-plugin",
   "version": "0.1.0",
-  "description": "A minimal HeyCC plugin template.",
+  "description": "A minimal HeyCC plugin template. / HeyCC 最小插件模板。",
   "author": {
     "name": "Plugin Author"
   },

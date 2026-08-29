@@ -1,23 +1,23 @@
-# Recipe title
+# Recipe title / 配方标题
 
-## 目标
+## Goal / 目标
 
-<!-- 这个配方解决什么问题？ -->
+<!-- What problem does this recipe solve? / 这个配方解决什么问题？ -->
 
-## 前置条件
+## Prerequisites / 前置条件
 
 -
 
-## 步骤
+## Steps / 步骤
 
 1.
 2.
 3.
 
-## 预期结果
+## Expected result / 预期结果
 
-## 常见失败原因
+## Common failure causes / 常见失败原因
 
-## 权限与安全边界
+## Permissions and security boundaries / 权限与安全边界
 
-## 平台限制
+## Platform limits / 平台限制

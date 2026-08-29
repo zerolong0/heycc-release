@@ -2,7 +2,7 @@
   "$schema": "../schemas/marketplace.schema.json",
   "name": "heycc-official",
   "version": "0.1.0",
-  "description": "Official and community plugin directory for HeyCC.",
+  "description": "Official and community plugin directory for HeyCC. / HeyCC 官方与社区插件目录。",
   "owner": {
     "name": "HeyCC"
   },

@@ -1,32 +1,34 @@
 ---
-name: Plugin submission
-about: 提交一个 HeyCC 插件或外部插件目录提案
+name: Plugin submission / 插件提交
+about: Submit a HeyCC plugin or external-plugin directory proposal / 提交一个 HeyCC 插件或外部插件目录提案
 title: "[Plugin] "
 labels: plugin-submission
 assignees: ""
 ---
 
-## 插件名称
+<!-- English / 中文 -->
 
-<!-- 必须是稳定、唯一的 kebab-case 名称。 -->
+## Plugin name / 插件名称
 
-## 功能简介
+<!-- It must be a stable, unique kebab-case name. / 必须是稳定、唯一的 kebab-case 名称。 -->
 
-## 作者和维护者
+## Summary / 功能简介
 
-## 来源仓库与固定版本
+## Author and maintainer / 作者和维护者
 
-## 许可证
+## Source repository and pinned version / 来源仓库与固定版本
 
-## 支持平台
+## License / 许可证
 
-## 请求的权限
+## Supported platforms / 支持平台
 
-## 是否包含外部服务或 Bridge？
+## Requested permissions / 请求的权限
 
-<!-- 说明网络、MCP、电脑端 Companion、iTerm2 等外部依赖。 -->
+## External services or Bridge? / 是否包含外部服务或 Bridge？
 
-## 安全说明
+<!-- Describe network, MCP, computer-side Companion, iTerm2, and other external dependencies. / 说明网络、MCP、电脑端 Companion、iTerm2 等外部依赖。 -->
+
+## Security checklist / 安全说明
 
 - [ ] 不包含密钥、Token 或私有产品源代码
 - [ ] 不依赖 Manifest 下发任意安装/探测命令

@@ -1,10 +1,36 @@
-# 提交一个 HeyCC 插件
+# Submit a HeyCC Plugin
 
-## 目标
+[English](#english) | [简体中文](#中文)
+
+## English
+
+### Goal
+
+Add a public, reviewable, and maintainable plugin to the HeyCC directory.
+
+### Steps
+
+1. Copy [`heycc-plugin/templates/minimal-plugin/`](../../../heycc-plugin/templates/minimal-plugin/) to `heycc-plugin/plugins/<plugin-id>/`.
+2. Edit `heyplugin.json` with the real name, version, author, permissions, and contributions.
+3. Add the plugin README, license, and third-party dependency notices.
+4. Add the plugin entry to `heycc-plugin/.heycc-plugin/marketplace.json`.
+5. Make sure the source uses a fixed Tag/SHA rather than an untraceable moving branch.
+6. Open a Plugin Submission with platforms, permissions, external services, and test results.
+
+### Not accepted
+
+- private product source code or credentials;
+- undisclosed network requests or external side effects;
+- arbitrary install/probe scripts in a Manifest;
+- dependencies with unclear licenses, untraceable sources, or no maintenance owner.
+
+## 中文
+
+### 目标
 
 把一个可公开、可审查、可维护的插件加入 HeyCC 目录。
 
-## 步骤
+### 步骤
 
 1. 复制 [`heycc-plugin/templates/minimal-plugin/`](../../../heycc-plugin/templates/minimal-plugin/) 到 `heycc-plugin/plugins/<plugin-id>/`。
 2. 修改 `heyplugin.json`，填写真实的名称、版本、作者、权限和贡献能力。
@@ -13,7 +39,7 @@
 5. 检查来源是固定 Tag/SHA，而不是不可追溯的浮动分支。
 6. 提交 Plugin Submission，说明平台、权限、外部服务和测试结果。
 
-## 不接受
+### 不接受
 
 - 私有产品源代码或凭证；
 - 未披露的网络请求和外部副作用；
